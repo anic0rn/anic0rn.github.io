@@ -1,0 +1,7 @@
+Annie Bistline Portfolio
+Version: 2026.08.09.2
+
+Final pre-publication polish:
+- Confirmed the human-centered About statement on the homepage.
+- Added a green-and-brass diamond favicon in SVG, ICO, and Apple touch-icon formats.
+- Applied favicon and browser theme metadata to all five canonical pages.

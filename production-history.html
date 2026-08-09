@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="A case study of production-history reconstruction and maturity-aware runtime modeling for manufacturing schedule forecasting by Annie Bistline."
+    >
+    <title>Production History &amp; Runtime Modeling | Annie Bistline</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#1d3028">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html" class="site-name">Annie Bistline</a>
+            <div class="nav-links">
+                <a href="index.html#projects">Work</a>
+                <a href="index.html#approach">Approach</a>
+                <a href="index.html#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="case-study production-history-case">
+
+        <section class="case-hero">
+            <a href="index.html#projects" class="back-link">← Back to selected work</a>
+
+            <p class="eyebrow">MANUFACTURING ANALYTICS · FORECASTING · ACTIVE PROJECT</p>
+
+            <h1>
+                Testing the evidence before trusting the model.
+            </h1>
+
+            <p class="case-intro">
+                I am reconstructing semi-structured production history to
+                understand factory learning, improve schedule forecasts, and
+                create a durable operational data stream for continuous
+                improvement.
+            </p>
+
+            <div class="case-meta">
+                <div class="meta-item">
+                    <p class="meta-label">ROLE</p>
+                    <p>Project originator, systems analyst, and data modeler</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">SCOPE</p>
+                    <p>Production forecasting, reporting, and planning intelligence</p>
+                </div>
+                <div class="meta-item">
+                    <p class="meta-label">STATUS</p>
+                    <p>Active research and evidence reconstruction</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="case-page-nav" aria-label="Production History sections">
+            <a href="#question">Question</a>
+            <a href="#evidence">Evidence</a>
+            <a href="#model">Model</a>
+            <a href="#data-stream">Data Stream</a>
+            <a href="#next-layer">Next Layer</a>
+        </nav>
+
+        <section class="case-section" id="question">
+            <p class="eyebrow">THE QUESTION</p>
+            <h2>
+                How can a small manufacturer forecast production more
+                accurately when every date affects the whole company?
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    I proposed this project because production dates were
+                    shaping decisions far beyond the factory floor. Forecast
+                    accuracy affected revenue planning, customer launches and
+                    restocking expectations, purchasing decisions, staffing,
+                    and the timing of work across the organization.
+                </p>
+                <p>
+                    Historical production seemed like the natural foundation
+                    for better estimates. But before using it to predict future
+                    runtimes, I needed to know whether the history was deep,
+                    consistent, and comparable enough to support that purpose.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="eyebrow">THE HYPOTHESIS</p>
+            <h2>
+                Product maturity may be a forecasting variable—not just a label.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    Earlier product-maturity and on-time-delivery studies
+                    suggested that manufacturing performance improves through
+                    repetition. Early runs may contain unfamiliar processing
+                    behavior, setup decisions, troubleshooting, or coordination
+                    needs that become better understood over time.
+                </p>
+                <p>
+                    That raised the question at the center of the model:
+                    should a first-time product be expected to perform like a
+                    product the factory has manufactured many times?
+                </p>
+            </div>
+
+            <blockquote class="case-callout">
+                <p>
+                    If the factory experiences a meaningful learning curve,
+                    product maturity belongs inside the forecast.
+                </p>
+            </blockquote>
+        </section>
+
+        <section class="case-section" id="evidence">
+            <p class="eyebrow">THE FIRST INVESTIGATION</p>
+            <h2>
+                I measured how much exact-product history was actually available.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    I compared historical lookback periods to determine how
+                    much useful repeat-production evidence each additional
+                    year provided for products manufactured in the current
+                    12-month period.
+                </p>
+            </div>
+
+            <figure class="structured-records-exhibit">
+                <div class="structured-records-plate">
+                    <header class="records-exhibit-header">
+                        <div class="records-exhibit-heading">
+                            <p class="records-exhibit-kicker">
+                                Analytical Output · ERP Repeatability Study
+                            </p>
+                            <h3>
+                                The evidence established a practical two-year scope.
+                            </h3>
+                            <p class="records-exhibit-description">
+                                The initial study compared how much usable
+                                exact-product history became available at each
+                                lookback period before the deeper production-report
+                                reconstruction began.
+                            </p>
+                        </div>
+
+                        <div class="records-exhibit-mark" aria-hidden="true">
+                            <span>ANALYSIS / DOC</span>
+                            <i></i>
+                        </div>
+                    </header>
+
+                    <div class="records-screenshot-frame">
+                        <img
+                            src="images/repeatability-analysis.png"
+                            alt="Historical Production Repeatability analysis showing coverage rising from 41.0 percent at one year to 57.6 percent at two years, then flattening to 62.5 percent at three years and 63.1 percent at four years."
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+                </div>
+
+                <figcaption class="structured-records-caption">
+                    <span class="structured-records-caption-label">
+                        Exhibit 01
+                    </span>
+                    <span>
+                        The initial ERP repeatability study compared how much
+                        usable exact-product history became available at each
+                        lookback period. Two years produced the largest practical
+                        gain; additional years added progressively less coverage.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <div class="lookback-instrument" data-lookback-explorer>
+                <div class="instrument-heading">
+                    <div>
+                        <p class="instrument-kicker">DECISION EXPLORER · HISTORICAL SCOPE</p>
+                        <h3>How much history is enough?</h3>
+                    </div>
+                    <p>Explore the documented result: select a lookback period to see how much current production gains usable exact-product history.</p>
+                </div>
+
+                <div class="lookback-controls" role="group" aria-label="Choose historical lookback period">
+                    <button type="button" data-years="1" aria-pressed="false"><span>01</span>1 year</button>
+                    <button type="button" data-years="2" aria-pressed="true"><span>02</span>2 years</button>
+                    <button type="button" data-years="3" aria-pressed="false"><span>03</span>3 years</button>
+                    <button type="button" data-years="4" aria-pressed="false"><span>04</span>4 years</button>
+                </div>
+
+                <div class="lookback-display" aria-live="polite">
+                    <div class="coverage-gauge" aria-hidden="true">
+                        <div class="coverage-gauge__track"><div class="coverage-gauge__fill" data-coverage-fill></div></div>
+                        <div class="coverage-gauge__scale"><span>0%</span><span>Current production with 3+ runs</span><span>100%</span></div>
+                    </div>
+                    <div class="coverage-result">
+                        <p class="coverage-value"><span data-coverage-value>57.6</span>%</p>
+                        <p class="coverage-label" data-coverage-label>of current production is associated with products having at least three observed runs.</p>
+                        <p class="coverage-judgment" data-coverage-judgment>Largest practical gain: +16.6 percentage points over one year.</p>
+                    </div>
+                </div>
+
+                <div class="lookback-curve" aria-label="Coverage rises from 41.0 percent at one year to 63.1 percent at four years, with gains flattening after two years.">
+                    <div class="curve-column"><span style="--coverage: 41%"></span><b>41.0%</b><small>1Y</small></div>
+                    <div class="curve-column is-threshold"><span style="--coverage: 57.6%"></span><b>57.6%</b><small>2Y · THRESHOLD</small></div>
+                    <div class="curve-column"><span style="--coverage: 62.5%"></span><b>62.5%</b><small>3Y</small></div>
+                    <div class="curve-column"><span style="--coverage: 63.1%"></span><b>63.1%</b><small>4Y</small></div>
+                </div>
+
+                <noscript>
+                    <div class="evidence-table-wrap">
+                        <table class="evidence-table">
+                            <caption>Current production associated with products having at least three observed runs</caption>
+                            <thead><tr><th scope="col">Historical lookback</th><th scope="col">Coverage</th></tr></thead>
+                            <tbody><tr><th scope="row">1 year</th><td>41.0%</td></tr><tr><th scope="row">2 years</th><td>57.6%</td></tr><tr><th scope="row">3 years</th><td>62.5%</td></tr><tr><th scope="row">4 years</th><td>63.1%</td></tr></tbody>
+                        </table>
+                    </div>
+                </noscript>
+            </div>
+
+            <div class="case-copy case-copy-after">
+                <p>
+                    Two years produced the largest practical gain. Extending
+                    the lookback further added relatively little exact-product
+                    coverage—and risked introducing older operating conditions
+                    that might no longer represent the factory.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="eyebrow">WHAT CHANGED</p>
+            <h2>
+                The result changed the problem from historical averaging to
+                evidence selection.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    I had expected the model to rely heavily on repeated runs
+                    of the same product. Instead, I found that a substantial
+                    share of production involved novel or short-lived items:
+                    products manufactured once or twice and never repeated, or
+                    repeated only after long gaps.
+                </p>
+                <p>
+                    Exact-product history alone could not support the forecast.
+                    The model would need to distinguish mature products with
+                    direct evidence from novel products that require comparison
+                    to structurally similar work.
+                </p>
+            </div>
+
+            <div class="challenge-grid">
+                <article class="challenge-card">
+                    <p class="card-number">01</p>
+                    <h3>Mature products</h3>
+                    <p>
+                        Use sufficiently recent, comparable runs while
+                        recognizing established performance and remaining variation.
+                    </p>
+                </article>
+                <article class="challenge-card">
+                    <p class="card-number">02</p>
+                    <h3>Novel products</h3>
+                    <p>
+                        Select analogs using process characteristics and attach
+                        greater uncertainty when direct evidence is sparse.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section" id="model">
+            <p class="eyebrow">THE EMERGING MODEL</p>
+            <h2>
+                Forecast confidence should reflect the strength of the evidence.
+            </h2>
+
+            <div class="governance-list">
+                <article>
+                    <p class="governance-number">01</p>
+                    <div>
+                        <h3>Start with direct product history</h3>
+                        <p>Use the product's own recent runs when enough comparable evidence exists.</p>
+                    </div>
+                </article>
+                <article>
+                    <p class="governance-number">02</p>
+                    <div>
+                        <h3>Interpret the learning stage</h3>
+                        <p>Distinguish early learning from established production performance.</p>
+                    </div>
+                </article>
+                <article>
+                    <p class="governance-number">03</p>
+                    <div>
+                        <h3>Select meaningful analogs</h3>
+                        <p>When direct history is limited, compare dosage form, batch size, equipment, process steps, and material behavior.</p>
+                    </div>
+                </article>
+                <article>
+                    <p class="governance-number">04</p>
+                    <div>
+                        <h3>Use broader process evidence</h3>
+                        <p>Fall back to production-stage evidence when no close comparison exists.</p>
+                    </div>
+                </article>
+                <article>
+                    <p class="governance-number">05</p>
+                    <div>
+                        <h3>Show the uncertainty</h3>
+                        <p>Communicate evidence strength and prediction ranges instead of giving every estimate equal authority.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="maturity-instrument" data-maturity-explorer>
+                <div class="instrument-heading instrument-heading--dark">
+                    <div>
+                        <p class="instrument-kicker">FORECASTING EXPLORER</p>
+                        <h3>The evidence changes as the factory learns.</h3>
+                    </div>
+                    <p>Choose a product maturity stage to see how the forecast should select evidence and express confidence.</p>
+                </div>
+
+                <div class="maturity-tabs" role="tablist" aria-label="Product maturity stage">
+                    <button type="button" role="tab" id="tab-first" aria-selected="true" aria-controls="maturity-panel" data-maturity="first">First run</button>
+                    <button type="button" role="tab" id="tab-early" aria-selected="false" aria-controls="maturity-panel" data-maturity="early">Early repeat</button>
+                    <button type="button" role="tab" id="tab-mature" aria-selected="false" aria-controls="maturity-panel" data-maturity="mature">Mature product</button>
+                </div>
+
+                <div class="maturity-panel" id="maturity-panel" role="tabpanel" aria-labelledby="tab-first" tabindex="0">
+                    <div class="maturity-stage">
+                        <p class="maturity-stage__number" data-maturity-number>RUN 01</p>
+                        <h4 data-maturity-title>No direct history</h4>
+                        <p data-maturity-description>The product has never been manufactured before, so its own average does not exist.</p>
+                    </div>
+                    <div class="evidence-route" aria-hidden="true"><span>Product</span><b>→</b><span data-route-label>Comparable work</span><b>→</b><span>Forecast range</span></div>
+                    <dl class="maturity-details">
+                        <div><dt>Evidence strategy</dt><dd data-evidence-strategy>Use structurally similar products: dosage form, batch size, equipment, process steps, and material behavior.</dd></div>
+                        <div><dt>Factory learning</dt><dd data-learning-state>Assume setup and processing uncertainty are still high.</dd></div>
+                        <div><dt>Forecast expression</dt><dd data-forecast-expression>Wider range · lower confidence</dd></div>
+                    </dl>
+                    <div class="confidence-band"><span>Evidence confidence</span><div><i data-confidence-fill></i></div><strong data-confidence-label>Developing</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="eyebrow">RECONSTRUCTING THE EVIDENCE</p>
+            <h2>
+                The business already generated valuable information—it just
+                was not analysis-ready.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    Execution details were distributed across ERP records and
+                    years of daily production-report emails. Those reports
+                    contained equipment, quantities, progress, delays, and
+                    timing, but they were written for immediate communication,
+                    not longitudinal analysis.
+                </p>
+                <p>
+                    A single run could appear across multiple updates as it
+                    moved through blending, encapsulation, tableting, or
+                    packaging. Terminology, equipment names, units, shifts, and
+                    reporting detail also changed over time.
+                </p>
+            </div>
+
+            <div class="model-grid">
+                <article class="model-card"><p class="step-number">01</p><h3>Connect</h3><p>Match updates to the correct production job and stage.</p></article>
+                <article class="model-card"><p class="step-number">02</p><h3>Normalize</h3><p>Standardize process, equipment, quantity, and unit terminology.</p></article>
+                <article class="model-card"><p class="step-number">03</p><h3>Reconstruct</h3><p>Combine progress updates into governed production episodes.</p></article>
+                <article class="model-card"><p class="step-number">04</p><h3>Interpret</h3><p>Separate observed execution shifts from elapsed calendar time.</p></article>
+                <article class="model-card"><p class="step-number">05</p><h3>Preserve</h3><p>Retain uncertainty when the source does not justify a definitive claim.</p></article>
+                <article class="model-card"><p class="step-number">06</p><h3>Compare</h3><p>Create evidence that can support maturity and runtime analysis.</p></article>
+            </div>
+
+            <figure class="structured-records-exhibit">
+                <div class="structured-records-plate">
+                    <header class="records-exhibit-header">
+                        <div class="records-exhibit-heading">
+                            <p class="records-exhibit-kicker">
+                                Source Evidence · Daily Production Report
+                            </p>
+                            <h3>
+                                Valuable operational detail, captured for communication.
+                            </h3>
+                            <p class="records-exhibit-description">
+                                The business was already recording equipment, products,
+                                lot codes, daily and cumulative quantities, completion
+                                status, and shift notes. The challenge was turning those
+                                uneven report fields into comparable production history.
+                            </p>
+                        </div>
+
+                        <div class="records-exhibit-mark" aria-hidden="true">
+                            <span>EMAIL / HTML</span>
+                            <i></i>
+                        </div>
+                    </header>
+
+                    <div class="records-screenshot-frame">
+                        <img
+                            src="images/anon-daily-report.png"
+                            alt="An anonymized daily production report showing machine, product, lot, quantity, completion, and free-text shift-note fields."
+                        >
+                    </div>
+                </div>
+
+                <figcaption class="structured-records-caption">
+                    <span class="structured-records-caption-label">
+                        Exhibit 02
+                    </span>
+                    <span>
+                        The anonymized excerpt preserves the original operational
+                        texture: structured columns sit beside implied units,
+                        cumulative totals, continuation language, and free-text notes
+                        that require interpretation before runs can be compared.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <div class="report-instrument" data-report-transform>
+                <div class="instrument-heading">
+                    <div>
+                        <p class="instrument-kicker">EXHIBIT 03 · RECORD TRANSFORMATION</p>
+                        <h3>From daily update to governed episode.</h3>
+                    </div>
+                    <p>The interpretation adds structure without pretending the source says more than it does.</p>
+                </div>
+
+                <div class="report-transform-grid">
+                    <article class="source-report">
+                        <p class="report-label">SOURCE · DAILY EMAIL</p>
+                        <blockquote>“CT running on machine 2. About 6 barrels completed. Should finish tomorrow.”</blockquote>
+                        <button type="button" class="transform-trigger" aria-expanded="false" aria-controls="governed-record"><span>Interpret the update</span><b aria-hidden="true">→</b></button>
+                    </article>
+
+                    <article class="governed-record" id="governed-record" aria-hidden="true">
+                        <div class="record-header"><p class="report-label">GOVERNED RECORD · RUN 03</p><span>INTERPRETED</span></div>
+                        <dl>
+                            <div><dt>Production stage</dt><dd>Compression</dd></div>
+                            <div><dt>Equipment</dt><dd>Tablet Press 2</dd></div>
+                            <div><dt>Reported quantity</dt><dd>6</dd></div>
+                            <div><dt>Reported unit</dt><dd>Barrel</dd></div>
+                            <div><dt>Execution state</dt><dd>In progress</dd></div>
+                            <div class="record-unresolved"><dt>Conversion confidence</dt><dd>Unresolved</dd></div>
+                        </dl>
+                        <p class="record-note">“Tomorrow” is retained as an expectation—not treated as observed completion.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="data-stream">
+            <p class="eyebrow">BUILDING A BETTER DATA STREAM</p>
+            <h2>
+                Historical cleanup can become lasting operational infrastructure.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    Reconstructing the history exposed both what the company
+                    could learn from its existing reports and what those reports
+                    consistently failed to capture. Those findings will inform
+                    a redesign of daily production reporting so future updates
+                    are entered in a more structured and consistent form.
+                </p>
+                <p>
+                    The redesigned process can support daily coordination while
+                    also creating a durable data stream for production KPIs,
+                    delay and variation analysis, maturity trends, and continual
+                    refinement of forecasting assumptions.
+                </p>
+            </div>
+
+            <div class="architecture-flow production-feedback-flow">
+                <article class="architecture-step"><p class="step-label">01 · OPERATE</p><h3>Daily reporting</h3><p>Capture consistent execution evidence as work happens.</p></article>
+                <div class="flow-arrow" aria-hidden="true">→</div>
+                <article class="architecture-step"><p class="step-label">02 · LEARN</p><h3>Performance analysis</h3><p>Measure outcomes, variation, delays, and factory learning.</p></article>
+                <div class="flow-arrow" aria-hidden="true">→</div>
+                <article class="architecture-step"><p class="step-label">03 · IMPROVE</p><h3>Forecast refinement</h3><p>Use each completed run to strengthen future estimates.</p></article>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="eyebrow">RIGHT-SIZED MANUFACTURING INTELLIGENCE</p>
+            <h2>
+                Smarter analytics did not need to begin with an expensive MES.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    For a smaller manufacturer, the most practical path was not
+                    to recreate every function of a large manufacturing
+                    execution system. It was to identify the intelligence the
+                    business actually needed and unlock it from ERP records,
+                    daily reports, and operational knowledge the company was
+                    already producing.
+                </p>
+                <p>
+                    This right-sized approach creates a foundation for more
+                    reliable forecasting, maturity-aware runtime estimates,
+                    consistent production KPIs, and continuous improvement—at
+                    a scale proportionate to the company's resources and
+                    operational maturity.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="eyebrow">THE JUDGMENT</p>
+            <h2>
+                I chose not to turn weak history into polished precision.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    The most important decision was not to move directly from
+                    raw records to a finished prediction. The repeatability
+                    analysis showed a structural weakness: much of the
+                    company's future work will not have enough exact-product
+                    history to support a dependable product-level average.
+                </p>
+                <p>
+                    Instead, I am building the foundation needed to distinguish
+                    strong evidence from weak analogy, understand how the
+                    factory learns, and make the confidence behind each forecast
+                    visible.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section" id="next-layer">
+            <p class="eyebrow">THE NEXT LAYER</p>
+            <h2>
+                The research will become the intelligence layer beneath APS.
+            </h2>
+
+            <div class="case-copy">
+                <p>
+                    Current work is focused on reconstructing comparable runs
+                    and validating quantity, unit, and runtime interpretations.
+                    The next phase will test how learning differs by production
+                    stage, which attributes identify useful analogs, and how
+                    prediction ranges should be expressed.
+                </p>
+                <p>
+                    Those findings will eventually feed the Advanced Planning
+                    &amp; Scheduling system, where evidence-based runtimes can
+                    become actionable production plans.
+                </p>
+            </div>
+
+            <a href="aps.html" class="button"><span>View APS in development</span></a>
+        </section>
+
+        <section class="case-next">
+            <p class="eyebrow">NEXT CASE STUDY</p>
+            <a href="aps.html">Advanced Planning &amp; Scheduling System →</a>
+        </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="footer-ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p>© 2026 Annie Bistline <span aria-hidden="true">·</span> Systems &amp; Operations</p>
+    </footer>
+    <script>
+        (() => {
+            const lookbackData = {
+                1: { value: 41.0, judgment: "Starting point: most current production still lacks three exact-product runs." },
+                2: { value: 57.6, judgment: "Largest practical gain: +16.6 percentage points over one year." },
+                3: { value: 62.5, judgment: "Diminishing return: only +4.9 points beyond the two-year scope." },
+                4: { value: 63.1, judgment: "The curve has flattened: four years adds just +0.6 points over three." }
+            };
+            const lookback = document.querySelector("[data-lookback-explorer]");
+            if (lookback) {
+                const buttons = [...lookback.querySelectorAll("[data-years]")];
+                const value = lookback.querySelector("[data-coverage-value]");
+                const fill = lookback.querySelector("[data-coverage-fill]");
+                const judgment = lookback.querySelector("[data-coverage-judgment]");
+                const selectYear = (button) => {
+                    const datum = lookbackData[button.dataset.years];
+                    buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+                    value.textContent = datum.value.toFixed(1);
+                    fill.style.width = `${datum.value}%`;
+                    judgment.textContent = datum.judgment;
+                };
+                buttons.forEach((button, index) => {
+                    button.addEventListener("click", () => selectYear(button));
+                    button.addEventListener("keydown", (event) => {
+                        if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+                        event.preventDefault();
+                        const direction = event.key === "ArrowRight" ? 1 : -1;
+                        const next = buttons[(index + direction + buttons.length) % buttons.length];
+                        next.focus(); selectYear(next);
+                    });
+                });
+                selectYear(buttons.find((button) => button.dataset.years === "2"));
+            }
+
+            const maturityData = {
+                first: { number: "RUN 01", title: "No direct history", description: "The product has never been manufactured before, so its own average does not exist.", route: "Comparable work", strategy: "Use structurally similar products: dosage form, batch size, equipment, process steps, and material behavior.", learning: "Assume setup and processing uncertainty are still high.", forecast: "Wider range · lower confidence", confidence: "Developing", width: "34%" },
+                early: { number: "RUNS 02–05", title: "Direct evidence is emerging", description: "The factory has begun learning this product, but a few runs may still reflect troubleshooting and changing methods.", route: "Direct + comparable", strategy: "Blend the product's own early history with comparable-run evidence instead of treating either source as sufficient alone.", learning: "Model early runs as learning-stage performance, not yet a stable baseline.", forecast: "Moderate range · qualified confidence", confidence: "Strengthening", width: "62%" },
+                mature: { number: "RUN 11+", title: "Established production evidence", description: "Repeated execution provides a stronger view of normal performance and remaining variation.", route: "Recent direct history", strategy: "Prioritize the product's own recent, operationally comparable runs and use analogs mainly as a reasonableness check.", learning: "Treat performance as established while still monitoring drift and outliers.", forecast: "Narrower range · stronger confidence", confidence: "Established", width: "88%" }
+            };
+            const maturity = document.querySelector("[data-maturity-explorer]");
+            if (maturity) {
+                const tabs = [...maturity.querySelectorAll("[data-maturity]")];
+                const panel = maturity.querySelector("[role='tabpanel']");
+                const fields = {
+                    number: maturity.querySelector("[data-maturity-number]"), title: maturity.querySelector("[data-maturity-title]"), description: maturity.querySelector("[data-maturity-description]"), route: maturity.querySelector("[data-route-label]"), strategy: maturity.querySelector("[data-evidence-strategy]"), learning: maturity.querySelector("[data-learning-state]"), forecast: maturity.querySelector("[data-forecast-expression]"), confidence: maturity.querySelector("[data-confidence-label]"), fill: maturity.querySelector("[data-confidence-fill]")
+                };
+                const selectMaturity = (tab) => {
+                    const datum = maturityData[tab.dataset.maturity];
+                    tabs.forEach((item) => { const selected = item === tab; item.setAttribute("aria-selected", String(selected)); item.tabIndex = selected ? 0 : -1; });
+                    panel.setAttribute("aria-labelledby", tab.id);
+                    Object.entries(fields).forEach(([key, element]) => { if (key !== "fill") element.textContent = datum[key]; });
+                    fields.fill.style.width = datum.width;
+                };
+                tabs.forEach((tab, index) => {
+                    tab.addEventListener("click", () => selectMaturity(tab));
+                    tab.addEventListener("keydown", (event) => {
+                        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+                        event.preventDefault();
+                        let nextIndex = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+                        tabs[nextIndex].focus(); selectMaturity(tabs[nextIndex]);
+                    });
+                });
+                selectMaturity(tabs[0]);
+            }
+
+            const transform = document.querySelector("[data-report-transform]");
+            if (transform) {
+                const trigger = transform.querySelector(".transform-trigger");
+                const record = transform.querySelector(".governed-record");
+                trigger.addEventListener("click", () => {
+                    const expanded = trigger.getAttribute("aria-expanded") === "true";
+                    trigger.setAttribute("aria-expanded", String(!expanded));
+                    record.setAttribute("aria-hidden", String(expanded));
+                    transform.classList.toggle("is-revealed", !expanded);
+                    trigger.querySelector("span").textContent = expanded ? "Interpret the update" : "Hide interpretation";
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
