@@ -11,12 +11,13 @@ button, a { touch-action: manipulation; }
   .nav-links { flex: 0 0 auto; gap: 13px; }
   .nav-links a, .nav-links a:last-child { display: inline-block; min-height: 34px; padding: 9px 0 6px; font-size: 10px; letter-spacing: .1em; }
 
-  .hero { min-height: auto; padding: 24px 18px 46px; }
-  .hero-frame { min-height: calc(100svh - 104px); padding: 64px 24px 58px; }
+  .hero { min-height: auto; padding: 18px 16px 38px; }
+  .hero-frame { min-height: auto; padding: 52px 24px 48px; }
   .hero-content { width: 100%; }
-  .hero-name { font-size: clamp(49px, 15vw, 72px); }
-  .hero h1 { font-size: clamp(28px, 8vw, 40px); line-height: 1.06; }
-  .hero .intro { font-size: 16px; line-height: 1.6; }
+  .hero-name { font-size: clamp(45px, 13.5vw, 66px); line-height: .9; }
+  .hero h1 { margin-top: 40px; font-size: clamp(27px, 7.4vw, 37px); line-height: 1.08; }
+  .hero .intro { margin-top: 28px; font-size: 15px; line-height: 1.55; }
+  .hero .button { margin-top: 34px; }
 
   #projects, #approach, #about, .page-section { padding-right: 20px; padding-left: 20px; }
   .project-card, .project-card.featured, .development-card { min-height: 0; }
@@ -24,9 +25,11 @@ button, a { touch-action: manipulation; }
   .project-card__footer { margin-top: 10px; }
 
   .case-study, .quality-case, .erp-case, :is(.production-history-case, .aps-case) { width: 100%; padding-right: 18px; padding-left: 18px; }
-  .case-hero, .quality-case .case-hero, .erp-case .case-hero, :is(.production-history-case, .aps-case) .case-hero { min-height: auto; margin-top: 18px; padding: 72px 24px 52px; }
-  .case-hero h1 { font-size: clamp(38px, 12vw, 58px); overflow-wrap: normal; }
-  .case-intro { font-size: 17px; line-height: 1.65; }
+  .case-hero, .quality-case .case-hero, .erp-case .case-hero, :is(.production-history-case, .aps-case) .case-hero { min-height: auto; margin-top: 14px; padding: 48px 24px 40px; }
+  .case-hero .back-link { margin-bottom: 36px; }
+  .case-hero h1 { margin-top: 14px; font-size: clamp(34px, 10vw, 50px); line-height: 1; letter-spacing: -.045em; overflow-wrap: normal; }
+  .case-intro { margin-top: 22px; font-size: 16px; line-height: 1.58; }
+  .case-meta { margin-top: 42px; padding-top: 12px; }
   .case-meta { gap: 0; }
   .case-meta > div { padding: 18px 0; border-right: 0; border-bottom: 1px solid rgba(176,138,82,.25); }
   .case-meta > div:last-child { border-bottom: 0; }
@@ -52,6 +55,29 @@ button, a { touch-action: manipulation; }
   .plate-head h3, .records-exhibit-heading h3, .governance-plate-heading h3 { font-size: clamp(27px, 8.5vw, 40px); overflow-wrap: anywhere; }
   .visual-caption, figcaption { font-size: 11px; line-height: 1.55; }
 
+  /* Source COAs become readable document cards instead of two squeezed columns. */
+  .coa-gallery { display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; margin: 48px 0; }
+  .coa-card { width: 100%; max-width: 440px; margin: 0 auto; }
+  .coa-offset { margin-top: 0; }
+  .coa-card figcaption { padding: 22px 20px 24px; }
+  .coa-card figcaption h3 { overflow-wrap: normal; word-break: normal; }
+  .coa-card figcaption p { overflow-wrap: normal; word-break: normal; }
+
+  /* The desktop cycle becomes one unambiguous downward sequence on mobile. */
+  .quality-case .governance-cycle-arrow,
+  .quality-case .cycle-arrow-1,
+  .quality-case .cycle-arrow-2,
+  .quality-case .cycle-arrow-3,
+  .quality-case .cycle-arrow-4,
+  .quality-case .cycle-arrow-5 {
+    display: grid;
+    place-items: center;
+    height: 38px;
+    transform: none !important;
+    font-size: 0;
+  }
+  .quality-case .governance-cycle-arrow::before { content: "\2193"; font-size: 25px; line-height: 1; }
+
   .erp-v1 .matrix-wrap, .evidence-table-wrap, .records-screenshot-frame { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; -webkit-overflow-scrolling: touch; }
   .erp-v1 .matrix, .evidence-table { min-width: 620px; }
   .coordination-band { grid-template-columns: 1fr; text-align: left; }
@@ -66,7 +92,9 @@ button, a { touch-action: manipulation; }
   .site-name { width: 100%; text-align: center; }
   .nav-links { width: 100%; justify-content: center; }
   .nav-links a, .nav-links a:last-child { min-width: 64px; text-align: center; }
-  .hero-frame { min-height: auto; padding: 56px 20px 50px; }
+  .hero-frame { min-height: auto; padding: 44px 20px 42px; }
+  .hero-name { font-size: clamp(43px, 13vw, 55px); }
+  .hero h1 { margin-top: 34px; }
   .button { width: 100%; justify-content: center; text-align: center; }
   .project-card__inner { padding: 25px 18px 24px 32px; }
   .project-document-meta { align-items: flex-start; flex-direction: column; }
