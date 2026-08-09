@@ -1,7 +1,16 @@
 Annie Bistline Portfolio
-Version: 2026.08.09.2
+Version: 2026.08.09.4
 
 Final pre-publication polish:
 - Confirmed the human-centered About statement on the homepage.
 - Added a green-and-brass diamond favicon in SVG, ICO, and Apple touch-icon formats.
 - Applied favicon and browser theme metadata to all five canonical pages.
+
+Mobile publication pass:
+- Consolidated phone navigation and removed the competing sticky section bar.
+- Reflowed case-study heroes, metadata, exhibits, controls, and project cards.
+- Improved touch targets, small-screen typography, table scrolling, and overflow protection.
+
+GitHub Pages navigation repair:
+- Standardized the sticky header to site-root URLs across every page.
+- Ensured Home, Work, Approach, and About resolve consistently after cross-page navigation.
